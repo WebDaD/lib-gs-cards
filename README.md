@@ -8,13 +8,52 @@ A Part of the gamingsimulator. Module Representing Cards and a Deck of Cards.
 
 ## Usage
 
-First, require the Module:
+First, require the Modules:
 
-`const cards = require('lib-gs-cards')`
+`const deck = require('lib-gs-cards/dist/deck')`
+
+`const card = require('lib-gs-cards/dist/card')`
+
+or ES6 Style:
+
+`import Deck from 'lib-gs-cards/dist/deck'`
+`import Card from 'lib-gs-cards/dist/card'`
+
+After That, create a new Deck:
+
+`let myDeck = new Deck()`
 
 Then you may perform the following actions:
 
-TODO: add Actions here.
+### Shuffle Deck
+
+`myDeck.shuffle()`
+
+Now the Cards are in a random Order
+
+### Get Number of Cards in Deck
+
+`myDeck.cardsInDeck()`
+
+How many Cards are left in my deck?
+
+### Draw A Card
+
+`let Card = myDeck.draw()`
+
+Returns a Card Object and reduces the Deck by this Card
+
+### Add a Card
+
+`myDeck.add(new Card(Value.Ace, Suit.Spades))`
+
+Allows to Add Any Card to the Deck
+
+### Refill the Deck
+
+`myDeck.refill()`
+
+Adds all 52 Cards to the Deck. Even if not empty yet.
 
 ## Dependencies
 
@@ -30,7 +69,7 @@ ClassDiagram:
 
 TODO: Add
 
-Can be found in docs/classdiagram.png
+Can be found in docs/classDiagram.png
 
 Also as editable plantUML-File.
 
