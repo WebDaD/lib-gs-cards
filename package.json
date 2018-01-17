@@ -1,0 +1,30 @@
+{
+  "name": "lib-gs-cards",
+  "version": "1.0.0",
+  "description": "A Part of the gamingsimulator. Module Representing Cards and a Deck of Cards",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha",
+    "build":"tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebDaD/lib-gs-cards.git"
+  },
+  "keywords": [
+    "gaming",
+    "simulator",
+    "card",
+    "deck"
+  ],
+  "author": "Dominik Sigmund",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/WebDaD/lib-gs-cards/issues"
+  },
+  "homepage": "https://github.com/WebDaD/lib-gs-cards#readme"
+}
