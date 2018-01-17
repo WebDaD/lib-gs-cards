@@ -16,8 +16,8 @@ First, require the Modules:
 
 or ES6 Style:
 
-`import Deck from 'lib-gs-cards/dist/deck'`
-`import Card from 'lib-gs-cards/dist/card'`
+`import Deck from 'lib-gs-cards/dist/src/deck'`
+`import Card from 'lib-gs-cards/dist/src/card'`
 
 After That, create a new Deck:
 
@@ -43,6 +43,12 @@ How many Cards are left in my deck?
 
 Returns a Card Object and reduces the Deck by this Card
 
+### Peek
+
+`let Card = myDeck.peek()`
+
+Returns a Card Object and does not alter the deck
+
 ### Add a Card
 
 `myDeck.add(new Card(Value.Ace, Suit.Spades))`
@@ -67,7 +73,7 @@ Here be Some Infos to make this even better.
 
 ClassDiagram:
 
-TODO: Add
+![The diagram](https://github.com/WebDaD/lib-gs-cards/raw/master/docs/classDiagram.png "The class Diagram")
 
 Can be found in docs/classDiagram.png
 
@@ -83,7 +89,11 @@ You may use your favorite Test-Runner to do them yourself.
 
 My Commandline is as follows:
 
-`istanbul cover _mocha -- tests/*.js -R mochawesome`
+`istanbul cover _mocha -- dist/tests/test.card.js dist/tests/test.deck.js -R mochawesome`
+
+OR
+
+`npm run tests`
 
 #### Results
 
@@ -92,7 +102,9 @@ Mochawesome-Report: docs/mochawesome-report/index.html
 
 ### JSON
 
-TODO: Add JSON for a Card, a Deck
+docs/card.schema.json
+
+docs/deck.schema.json
 
 ## Authors
 

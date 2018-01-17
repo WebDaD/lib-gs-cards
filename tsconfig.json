@@ -5,8 +5,11 @@
     "outDir": "dist",
     "sourceMap": true
   },
-  "include": [
-    "src/**/*.ts"
+  "files": [
+    "src/card.ts",
+    "src/deck.ts",
+    "tests/test.card.ts",
+    "tests/test.deck.ts"
   ],
   "exclude": [
     "node_modules"

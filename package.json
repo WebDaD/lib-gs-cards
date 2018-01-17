@@ -1,7 +1,7 @@
 {
   "name": "lib-gs-cards",
   "version": "1.0.0",
-  "description": "A Part of the gamingsimulator. Module Representing Cards and a Deck of Cards",
+  "description": "A Part of the gamingsimulator. Modules Representing Cards and a Deck of Cards",
   "main": "index.js",
   "directories": {
     "doc": "docs",
@@ -10,8 +10,9 @@
     "dist": "dist"
   },
   "scripts": {
-    "test": "mocha tests/*.js",
-    "build":"tsc"
+    "pretest": "npm run build",
+    "test": "istanbul cover _mocha -- dist/tests/test.card.js dist/tests/test.deck.js -R mochawesome",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,15 @@
   "bugs": {
     "url": "https://github.com/WebDaD/lib-gs-cards/issues"
   },
-  "homepage": "https://github.com/WebDaD/lib-gs-cards#readme"
+  "homepage": "https://github.com/WebDaD/lib-gs-cards#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^2.2.46",
+    "chai": "^4.1.2",
+    "istanbul": "^0.4.5",
+    "jsdoc": "^3.5.5",
+    "mocha": "^4.1.0",
+    "mochawesome": "^3.0.1",
+    "typescript": "^2.6.2"
+  }
 }

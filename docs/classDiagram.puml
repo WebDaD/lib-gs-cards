@@ -1,0 +1,42 @@
+@startuml
+class Card {
+  + value: Value
+  + suit: Suit
+  + {method} contructor(value: Value, suit: Suit): Card
+  + {method} valueOf(): number
+}
+class Deck {
+  + cards: Card[]
+  + {method} shuffle(): void
+  + {method} cardsInDeck(): number
+  + {method} draw(): Card
+  + {method} peek(): Card
+  + {method} add(card: Card): void
+  + {method} refill(): void
+  - {method} newDeck(): void
+}
+enum Value {
+  + Ace = 1
+  + Two = 2
+  + Three = 3
+  + Four = 4
+  + Five = 5
+  + Six =	6
+  + Seven =	7
+  + Eight =	8
+  + Nine = 9
+  + Ten =	10
+  + Jack = 11
+  +Queen = 12
+  + King = 13
+}
+enum Suit {
+  + Hearts = 0
+  + Diamonds = 1
+  + Clubs = 2
+  + Spades = 3
+}
+Deck <-- Card
+Card *-- Value
+Card *-- Suit
+@enduml
