@@ -15,6 +15,14 @@ class Deck {
   + {method} refill(): void
   - {method} newDeck(): void
 }
+class Hand {
+  + cards: Card[]
+  + {method} cardsInHand(): number
+  + {method} list(): Card
+  + {method} play(index: number): Card
+  + {method} look(index: number): Card
+  + {method} add(card: Card): void
+}
 enum Value {
   + Ace = 1
   + Two = 2
@@ -27,7 +35,7 @@ enum Value {
   + Nine = 9
   + Ten =	10
   + Jack = 11
-  +Queen = 12
+  + Queen = 12
   + King = 13
 }
 enum Suit {
@@ -36,6 +44,7 @@ enum Suit {
   + Clubs = 2
   + Spades = 3
 }
+Hand <-- Card
 Deck <-- Card
 Card *-- Value
 Card *-- Suit

@@ -14,10 +14,31 @@ First, require the Modules:
 
 `const card = require('lib-gs-cards/dist/card')`
 
+`const hand = require('lib-gs-cards/dist/hand')`
+
 or ES6 Style:
 
 `import Deck from 'lib-gs-cards/dist/src/deck'`
-`import Card from 'lib-gs-cards/dist/src/card'`
+`import Card, Value, Suit from 'lib-gs-cards/dist/src/card'`
+`import Hand from 'lib-gs-cards/dist/src/hand'`
+
+### The Card
+
+You May Create a Card:
+
+`let myCard= new Card(Value.Ace, Suit.Spades)`
+
+or draw one form the Deck or get one form the hand...
+
+Then you may:
+
+#### Get The Value of the Card as Number
+
+`var value: number = myCard.valueOf()`
+
+Easy as that. Ace counts 1, 10/J/Q/K counts 10
+
+### The Deck
 
 After That, create a new Deck:
 
@@ -25,41 +46,79 @@ After That, create a new Deck:
 
 Then you may perform the following actions:
 
-### Shuffle Deck
+#### Shuffle Deck
 
 `myDeck.shuffle()`
 
 Now the Cards are in a random Order
 
-### Get Number of Cards in Deck
+#### Get Number of Cards in Deck
 
 `myDeck.cardsInDeck()`
 
 How many Cards are left in my deck?
 
-### Draw A Card
+#### Draw A Card
 
 `let Card = myDeck.draw()`
 
 Returns a Card Object and reduces the Deck by this Card
 
-### Peek
+#### Peek
 
 `let Card = myDeck.peek()`
 
 Returns a Card Object and does not alter the deck
 
-### Add a Card
+#### Add a Card
 
 `myDeck.add(new Card(Value.Ace, Suit.Spades))`
 
 Allows to Add Any Card to the Deck
 
-### Refill the Deck
+#### Refill the Deck
 
 `myDeck.refill()`
 
 Adds all 52 Cards to the Deck. Even if not empty yet.
+
+### The Hand
+
+The Hand is the Players Stack. Create One:
+
+`let myHand = new Hand()`
+
+Then you may:
+
+#### List all Cards
+
+Returns an Array of Cards:
+
+`let cards: Card[] = myHand.list()`
+
+#### Get Number of Cards in Hand
+
+`myHand.cardsInHand()`
+
+How many Cards are left in my hand?
+
+#### Look at a Card
+
+Returns the Card, not altering the Hand:
+
+`let card: Card = myHand.look(index)`
+
+#### Play a Card
+
+Returns the Card, removing it from the Hand:
+
+`let card: Card = myHand.play(index)`
+
+#### Add a Card to the Hand
+
+`myHand.add(new Card(Value.Ace, Suit.Spades))`
+
+Allows to Add Any Card to the Hand
 
 ## Dependencies
 
@@ -89,11 +148,11 @@ You may use your favorite Test-Runner to do them yourself.
 
 My Commandline is as follows:
 
-`istanbul cover _mocha -- dist/tests/test.card.js dist/tests/test.deck.js -R mochawesome`
+`istanbul cover _mocha -- dist/tests/test.card.js dist/tests/test.deck.js dist/tests/test.hand.js -R mochawesome`
 
 OR
 
-`npm run tests`
+`npm run test`
 
 #### Results
 
@@ -105,6 +164,8 @@ Mochawesome-Report: docs/mochawesome-report/index.html
 docs/card.schema.json
 
 docs/deck.schema.json
+
+docs/hand.schema.json
 
 ## Authors
 

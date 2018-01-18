@@ -1,0 +1,55 @@
+{
+  "$id": "http://webdad.eu/gs/",
+  "type": "array",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "items": {
+    "$id": "http://webdad.eu/gs/",
+    "type": "object",
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "properties": {
+      "suit": {
+        "$id": "/properties/suit",
+        "type": "string",
+        "title": "The Suit",
+        "description": "Holds the Suit of the Card.",
+        "default": "",
+        "examples": [
+          "Suit"
+        ],
+        "enum": [
+          "Spades",
+          "Hearts",
+          "Diamonds",
+          "Clubs"
+        ]
+      },
+      "value": {
+        "$id": "/properties/value",
+        "type": "string",
+        "title": "The Value",
+        "description": "Holds the Value of the Card.",
+        "default": "",
+        "examples": [
+          "Value"
+        ],
+        "enum": [
+          "Ace",
+          "Two",
+          "Three",
+          "Four",
+          "Five",
+          "Six",
+          "Seven",
+          "Eight",
+          "Nine",
+          "Ten",
+          "Jack",
+          "Queen",
+          "King"
+        ]
+      }
+    }
+  }
+}

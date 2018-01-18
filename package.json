@@ -1,6 +1,6 @@
 {
   "name": "lib-gs-cards",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Part of the gamingsimulator. Modules Representing Cards and a Deck of Cards",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "pretest": "npm run build",
-    "test": "istanbul cover _mocha -- dist/tests/test.card.js dist/tests/test.deck.js -R mochawesome",
+    "test": "istanbul cover _mocha -- dist/tests/test.card.js dist/tests/test.deck.js dist/tests/test.hand.js -R mochawesome",
     "build": "tsc"
   },
   "repository": {

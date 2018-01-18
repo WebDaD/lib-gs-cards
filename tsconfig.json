@@ -8,8 +8,10 @@
   "files": [
     "src/card.ts",
     "src/deck.ts",
+    "src/hand.ts",
     "tests/test.card.ts",
-    "tests/test.deck.ts"
+    "tests/test.deck.ts",
+    "tests/test.hand.ts"
   ],
   "exclude": [
     "node_modules"
